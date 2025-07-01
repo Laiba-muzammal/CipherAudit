@@ -1,16 +1,11 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from pass_checker.routes import checker  
 
-db = SQLAlchemy()  # 🟡 App ke bina bana lo instance
 
-def create_app():
-    app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app = Flask(__name__)
     
-    db.init_app(app)  # 🟢 Yahan bind karo
-    
-    return app
+app.register_blueprint(checker)   
 
-if __name__=='__main__':
-    app = create_app()  
+
+if __name__ == '__main__':
     app.run(debug=True)

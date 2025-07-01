@@ -155,19 +155,3 @@ def pass_checker():
 @checker.route("/response", methods=["GET","POST"])
 def response():
     return render_template("response.html")
-
-@checker.route("/", methods=["GET","POST"])
-def landing():
-    if request.method == "POST":
-        name = request.form.get('name', '').strip()
-        email = request.form.get('email', '').strip()
-
-        if not name or not email :
-            flash("All fields are required!","danger")
-            return render_template('index.html', name=name, email=email)
-
-        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            flash("Invalid email format!","danger")
-            return render_template('index.html', name=name, email=email)
-        
-        return render_template("index.html")
