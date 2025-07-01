@@ -81,24 +81,32 @@ python main.py
 💡 Most password checkers just show a red or green bar. CipherAudit gives a real-world risk evaluation backed by data and backend logic.
 
 📁 Project Structure
-
 CipherAudit/
 │
-├── main.py                    # Entry point
-├── pass_checker/
-│   ├── __init__.py            # App factory (if used)
-│   ├── routes.py              # All logic & route handling
-│   └── patterns/              # Pattern files (.txt)
+├── app.py                       # 🔥 Main entry point — runs the app
+├── requirements.txt             # 📦 Python dependencies
+├── README.md                    # 📘 Full project guide
+│── .gitignore
+
+├── pass_checker/                # 🔄 Main Flask blueprint package
+│   ├── __init__.py              # 🧠 Registers blueprint
+│   ├── routes.py                # 🔎 All route logic (POST/GET)
+│   └── patterns/                # 📂 Password pattern files
+│       ├── common_password.txt
+│       ├── dictionary.txt
+│       ├── keyboard_patterns.txt
+│       ├── repetition.txt
+│       └── sequence.txt
 │
-├── templates/
-│   ├── home.html              # Main input form
-│   └── response.html          # Results page
+├── static/                      # 🎨 CSS or other static assets
+│   └── style.css
 │
-├── static/
-│   └── style.css              # Custom styling
+├── templates/                   # 🖼️ HTML pages
+│   ├── home.html
+│   └── response.html
 │
-├── requirements.txt
-└── README.md
+└── .venv/                       # 🔒 Python virtual environment (local only)
+
 
 📜 License
 This project is under the MIT License.
