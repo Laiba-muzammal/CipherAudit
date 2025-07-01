@@ -56,7 +56,7 @@ def checker_from_files(filename, password):
     return None
 
 # Main route
-@checker.route("/home", methods=["GET", "POST"])
+@checker.route("/", methods=["GET", "POST"])
 def pass_checker():
     if request.method == "POST":
         password = request.form.get("password")
