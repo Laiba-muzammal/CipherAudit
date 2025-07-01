@@ -65,8 +65,6 @@ pip install -r requirements.txt
 # 4. Run the application
 python main.py
 
-# Visit: http://127.0.0.1:5000
-
 ## 🛡️ How CipherAudit Stands Out
 
 | Feature                        | Basic Checkers ❌ | CipherAudit ✅ |
