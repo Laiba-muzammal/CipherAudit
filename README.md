@@ -66,21 +66,24 @@ pip install -r requirements.txt
 python main.py
 
 # Visit: http://127.0.0.1:5000
-🛡️ How CipherAudit Stands Out
-Feature	Basic Checkers ❌	CipherAudit ✅
-Entropy Calculation	❌	✅
-Pwned Password Check (HIBP)	❌	✅
-Pattern File Matching	❌	✅
-Crack Time Prediction	❌	✅
-Flask Blueprint Architecture	❌	✅
-Security-Oriented Design	❌	✅
-Rate Limiting (Optional)	❌	✅
-Ready for API Extension	❌	✅
+
+## 🛡️ How CipherAudit Stands Out
+
+| Feature                        | Basic Checkers ❌ | CipherAudit ✅ |
+|-------------------------------|-------------------|----------------|
+| Entropy Calculation           | ❌                | ✅             |
+| Pwned Password Check (HIBP)   | ❌                | ✅             |
+| Pattern File Matching         | ❌                | ✅             |
+| Crack Time Prediction         | ❌                | ✅             |
+| Flask Blueprint Architecture  | ❌                | ✅             |
+| Security-Oriented Design      | ❌                | ✅             |
+| Rate Limiting (Optional)      | ❌                | ✅             |
+| Ready for API Extension       | ❌                | ✅             |
 
 💡 Most password checkers just show a red or green bar. CipherAudit gives a real-world risk evaluation backed by data and backend logic.
 
 📁 Project Structure
-csharp
+
 CipherAudit/
 │
 ├── main.py                    # Entry point
