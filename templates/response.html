@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Response</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Password Result:</h2>
+    <h4  class="result-h4">Your password: {{password}}</h4>
+    <div class="result-box">
+      {% for i in results %}
+        <div class="result-line">{{ i }}</div>
+      {% endfor %}
+    </div>
+    <div class="back-btn">
+      <a href="/"><button>Back to Home</button></a>
+    </div>
+  </div>
+</body>
+
+</html>
