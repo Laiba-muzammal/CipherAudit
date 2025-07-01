@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Env/Secrets (if any in future)
+.env
