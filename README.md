@@ -81,8 +81,6 @@ Ready for API Extension	❌	✅
 
 📁 Project Structure
 csharp
-Copy
-Edit
 CipherAudit/
 │
 ├── main.py                    # Entry point
