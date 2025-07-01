@@ -41,13 +41,6 @@
 | File I/O     | Loading and comparing pattern sets           |
 | `requests`   | HTTP requests to HaveIBeenPwned API          |
 
-## 🚀 Live Preview (Optional)
-
-If deployed, link your site here:
-
-> 🔗 https://cipheraudit.yourdomain.com *(Example)*
-
-
 ## 📦 Getting Started Locally
 
 ```bash
