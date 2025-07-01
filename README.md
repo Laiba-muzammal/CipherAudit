@@ -110,4 +110,3 @@ Have an idea to improve CipherAudit? Feel free to fork the repo and submit a pul
 🧠 Made by
 Laiba Muzammal
 Backend Developer | Flask Enthusiast
-📬 LinkedIn • GitHub
