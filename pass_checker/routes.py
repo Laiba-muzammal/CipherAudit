@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request,abort
+from flask import Blueprint, render_template, request,abort,current_app,flash
 import re, math, hashlib, requests
 
 checker = Blueprint("checker", __name__, template_folder="templates", static_folder="static")
@@ -56,7 +56,7 @@ def checker_from_files(filename, password):
     return None
 
 # Main route
-@checker.route("/", methods=["GET", "POST"])
+@checker.route("/home", methods=["GET", "POST"])
 def pass_checker():
     if request.method == "POST":
         password = request.form.get("password")
@@ -128,12 +128,16 @@ def pass_checker():
         result.append(f"⏱️ Estimated Crack Time: {time_crack}")
 
         # Pwned check
-        pwned, count = check_pwned_password(password)
-        if pwned:
-            result.append(f"⚠️ Password has been pwned {count} times")
-        else:
-            result.append("✅ Password hasn't been pwned yet")
-            score+=1
+        try:
+            pwned, count = check_pwned_password(password)
+        except request.exceptions.RequestException as e:
+            current_app.logger.error(f"PwnedPasswords API failed: {e}")
+            pwned, count = False, 0
+            if pwned:
+                result.append(f"⚠️ Password has been pwned {count} times")
+            else:
+                result.append("✅ Password hasn't been pwned yet")
+                score+=1
 
         # Final score
         if score >= 7:
@@ -151,3 +155,19 @@ def pass_checker():
 @checker.route("/response", methods=["GET","POST"])
 def response():
     return render_template("response.html")
+
+@checker.route("/", methods=["GET","POST"])
+def landing():
+    if request.method == "POST":
+        name = request.form.get('name', '').strip()
+        email = request.form.get('email', '').strip()
+
+        if not name or not email :
+            flash("All fields are required!","danger")
+            return render_template('index.html', name=name, email=email)
+
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            flash("Invalid email format!","danger")
+            return render_template('index.html', name=name, email=email)
+        
+        return render_template("index.html")
