@@ -4,6 +4,8 @@
 
 > ✅ Built for developers, security learners, and curious users who care about real password safety — not just red/green bars.
 
+---
+
 ## 🌟 Key Features
 
 - 🔢 **Entropy-Based Scoring**  
@@ -29,6 +31,8 @@
 - 🧠 **Clean UI with Flask + Bootstrap**  
   Easy to use, responsive UI — no JavaScript required.
 
+---
+
 ## 🧰 Tools & Technologies
 
 | Tech         | Purpose                                      |
@@ -41,22 +45,35 @@
 | File I/O     | Loading and comparing pattern sets           |
 | `requests`   | HTTP requests to HaveIBeenPwned API          |
 
+---
+
 ## 📦 Getting Started Locally
 
-```bash
 # 1. Clone this repo
+
+```bash
 git clone https://github.com/Laiba-muzammal/CipherAudit.git
 cd CipherAudit
+```
 
 # 2. Create a virtual environment
+
+```bash
 python -m venv venv
 venv\Scripts\activate  # For Windows
+```
 
 # 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 # 4. Run the application
+```bash
 python main.py
+```
+
+---
 
 ## 🛡️ How CipherAudit Stands Out
 
@@ -73,6 +90,8 @@ python main.py
 
 💡 Most password checkers just show a red or green bar. CipherAudit gives a real-world risk evaluation backed by data and backend logic.
 
+---
+
 📁 Project Structure
 CipherAudit/
 │
@@ -80,7 +99,6 @@ CipherAudit/
 ├── requirements.txt             # 📦 Python dependencies
 ├── README.md                    # 📘 Full project guide
 │── .gitignore
-
 ├── pass_checker/                # 🔄 Main Flask blueprint package
 │   ├── __init__.py              # 🧠 Registers blueprint
 │   ├── routes.py                # 🔎 All route logic (POST/GET)
@@ -100,12 +118,17 @@ CipherAudit/
 │
 └── .venv/                       # 🔒 Python virtual environment (local only)
 
+---
 
-📜 License
+### 📜 License
 This project is under the MIT License.
 
-🤝 Contribute
+---
+
+### 🤝 Contribute
 Have an idea to improve CipherAudit? Feel free to fork the repo and submit a pull request.
+
+---
 
 🧠 Made by
 Laiba Muzammal
