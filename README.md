@@ -49,26 +49,26 @@
 
 ## 📦 Getting Started Locally
 
-# 1. Clone this repo
+### 1. Clone this repo
 
 ```bash
 git clone https://github.com/Laiba-muzammal/CipherAudit.git
 cd CipherAudit
 ```
 
-# 2. Create a virtual environment
+### 2. Create a virtual environment
 
 ```bash
 python -m venv venv
 venv\Scripts\activate  # For Windows
 ```
 
-# 3. Install dependencies
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-# 4. Run the application
+### 4. Run the application
 ```bash
 python main.py
 ```
@@ -88,11 +88,13 @@ python main.py
 | Rate Limiting (Optional)      | ❌                | ✅             |
 | Ready for API Extension       | ❌                | ✅             |
 
-💡 Most password checkers just show a red or green bar. CipherAudit gives a real-world risk evaluation backed by data and backend logic.
+> 💡 Most password checkers just show a red or green bar. CipherAudit gives a real-world risk evaluation backed by data and backend logic.
 
 ---
 
 📁 Project Structure
+
+```bash 
 CipherAudit/
 │
 ├── app.py                       # 🔥 Main entry point — runs the app
@@ -117,6 +119,7 @@ CipherAudit/
 │   └── response.html
 │
 └── .venv/                       # 🔒 Python virtual environment (local only)
+```
 
 ---
 
