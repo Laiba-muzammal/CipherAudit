@@ -6,6 +6,16 @@
 
 ---
 
+## 📸 Preview — App Screenshots
+
+| 🏠 Home Page | 🔤 Password Input | 📊 Result View |
+|-------------|------------------|----------------|
+| ![Home Page](screenshots/home%20page.png) | ![Input](screenshots/input.png) | ![Result](screenshots/result.png) |
+
+> 🧠 This walkthrough highlights CipherAudit's clean UI, backend logic, and real-time risk analysis.
+
+---
+
 ## 🌟 Key Features
 
 - 🔢 **Entropy-Based Scoring**  
